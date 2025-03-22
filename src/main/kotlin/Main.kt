@@ -32,7 +32,7 @@ fun main() = application {
         title = "Punktator",
         resizable = true,
         state = rememberWindowState(
-            width = 1200.dp,
+            width = 1200. dp,
             height = 700.dp
         ))
         {

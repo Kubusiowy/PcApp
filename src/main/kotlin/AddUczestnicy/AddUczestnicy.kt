@@ -1,7 +1,8 @@
 package AddUczestnicy
 
 import Data.Screen
-import Theme.backgroundColor
+import Theme.AppColors
+
 import TopMenu
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -16,7 +17,7 @@ import androidx.compose.ui.Modifier
 @Composable
 fun AddUczestnicy(onNavigate: (Screen)->Unit)
 {
-    Column(Modifier.fillMaxSize().background(backgroundColor)) {
+    Column(Modifier.fillMaxSize().background(AppColors.Background)) {
 
         TopMenu("Dodaj Uczestników", onNavigate)
 
