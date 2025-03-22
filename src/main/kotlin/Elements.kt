@@ -3,6 +3,7 @@ import AddKonkurencja.AddKonkurencja
 import AddUczestnicy.AddUczestnicy
 import Data.Screen
 import StartScreen.StartScreen
+import Theme.topbackgroundColor
 import WynikiCalkowite.WynikiCalkowite
 import WynikiCzesciowe.WynikiCzesciowe
 import androidx.compose.desktop.ui.tooling.preview.Preview
@@ -28,9 +29,10 @@ import androidx.compose.ui.window.application
 @Composable
 fun TopMenu(navName:String,OnNavigateUp:(Screen)->Unit)
 {
-    Box(Modifier.fillMaxWidth().background(Color.White)) {
+    Box(Modifier.fillMaxWidth().background(topbackgroundColor)) {
     IconButton(onClick = {OnNavigateUp(Screen.Start)}) {
         Icon(
+            tint = Color.White,
             imageVector = Icons.Filled.ArrowBack,
             contentDescription = "wstecz",
             modifier = Modifier
@@ -38,6 +40,7 @@ fun TopMenu(navName:String,OnNavigateUp:(Screen)->Unit)
 
         )
     }
-        Text(text = "${navName}",fontSize = 20.sp, modifier = Modifier.align(Alignment.CenterEnd) )
+        Text(text = "${navName}",fontSize = 20.sp,color = Color.White
+            , modifier = Modifier.align(Alignment.CenterEnd).padding(end = 20.dp) )
     }
 }

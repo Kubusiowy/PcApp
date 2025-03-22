@@ -19,7 +19,7 @@ fun AddJury(onNavigate: (Screen)->Unit)
 {
   Column(Modifier.fillMaxSize().background(backgroundColor)) {
 
-          TopMenu("Add Jury", onNavigate)
+          TopMenu("Dodaj Jury", onNavigate)
 
       Column(modifier = Modifier.fillMaxSize().weight(1f))
       {

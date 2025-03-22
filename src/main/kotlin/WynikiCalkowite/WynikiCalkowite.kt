@@ -1,6 +1,9 @@
 package WynikiCalkowite
 
 import Data.Screen
+import Theme.backgroundColor
+import TopMenu
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Text
@@ -13,10 +16,13 @@ import androidx.compose.ui.Modifier
 @Composable
 fun WynikiCalkowite(onNavigate: (Screen)->Unit)
 {
-    Column(modifier = Modifier
-        .fillMaxSize()
-        ,horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(text = "Wyniki Calkowite")
+    Column(Modifier.fillMaxSize().background(backgroundColor)) {
+
+        TopMenu("Wyniki Całkowite", onNavigate)
+
+        Column(modifier = Modifier.fillMaxSize().weight(1f))
+        {
+
+        }
     }
 }
