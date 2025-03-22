@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Text
+import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -20,41 +21,45 @@ fun StartScreen(onNavigate: (Screen) -> Unit) {
     Column(modifier = Modifier
         .fillMaxSize()
         .background(backgroundColor),
-        verticalArrangement = Arrangement.Center
-        ,horizontalAlignment = Alignment.CenterHorizontally
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+
 
     ) {
 
-            Button(onClick = { onNavigate(Screen.DodajKonkurencje) },
-                modifier = Modifier.fillMaxWidth(0.6f)) {
-                Text("Dodaj Konkurencje",fontSize = 20.sp)
-            }
 
-            Spacer(Modifier.height(5.dp))
-            Button(onClick = {onNavigate(Screen.DodajJury)  },
-                modifier = Modifier.fillMaxWidth(0.6f)) {
-                Text("Dodaj Jury",fontSize = 20.sp)
-            }
+        Button(onClick = { onNavigate(Screen.DodajKonkurencje) },
+            modifier = Modifier.fillMaxWidth(0.6f)) {
+            Text("Dodaj Konkurencje",fontSize = 20.sp)
+        }
 
-            Spacer(Modifier.height(5.dp))
-            Button(onClick = {onNavigate(Screen.DodajUczestnikow)  },
-                modifier = Modifier
-                    .fillMaxWidth(0.6f),
-                ){
-                Text("Dodaj uczestników",fontSize = 20.sp)
-            }
+        Spacer(Modifier.height(5.dp))
+        Button(onClick = {onNavigate(Screen.DodajJury)  },
+            modifier = Modifier.fillMaxWidth(0.6f)) {
+            Text("Dodaj Jury",fontSize = 20.sp)
+        }
 
-            Spacer(Modifier.height(5.dp))
-            Button(onClick = { onNavigate(Screen.WynikiCalkowite) },
-                modifier = Modifier.fillMaxWidth(0.6f)) {
-                Text("Zobacz wyniki całkowite",fontSize = 20.sp)
-            }
+        Spacer(Modifier.height(5.dp))
+        Button(onClick = {onNavigate(Screen.DodajUczestnikow)  },
+            modifier = Modifier
+                .fillMaxWidth(0.6f),
+        ){
+            Text("Dodaj uczestników",fontSize = 20.sp)
+        }
 
-            Spacer(Modifier.height(5.dp))
-            Button(onClick = {onNavigate(Screen.WynikiCzesciowe)  },
-                modifier = Modifier.fillMaxWidth(0.6f)) {
-                Text("Zobacz wyniki częsciowe",fontSize = 20.sp)
-            }
+        Spacer(Modifier.height(5.dp))
+        Button(onClick = { onNavigate(Screen.WynikiCalkowite) },
+            modifier = Modifier.fillMaxWidth(0.6f)) {
+            Text("Zobacz wyniki całkowite",fontSize = 20.sp)
+        }
+
+        Spacer(Modifier.height(5.dp))
+        Button(onClick = {onNavigate(Screen.WynikiCzesciowe)  },
+            modifier = Modifier.fillMaxWidth(0.6f)) {
+            Text("Zobacz wyniki częsciowe",fontSize = 20.sp)
+        }
+
+
 
 
     }

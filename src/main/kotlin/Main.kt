@@ -32,7 +32,7 @@ fun main() = application {
         title = "Punktator",
         resizable = true,
         state = rememberWindowState(
-            width = 1000.dp,
+            width = 1200.dp,
             height = 700.dp
         ))
         {
@@ -45,15 +45,15 @@ fun main() = application {
 @Composable
 fun Navigation()
 {
-    var currentSreen by remember {mutableStateOf(Screen.Start) }
+    var currentScreen by remember {mutableStateOf(Screen.Start) }
 
-    when(currentSreen) {
-        Screen.Start -> { StartScreen(onNavigate =  { currentSreen = it})}
-        Screen.DodajJury -> AddJury(onNavigate = { currentSreen = it})
-        Screen.DodajKonkurencje -> AddKonkurencja(onNavigate = { currentSreen = it})
-        Screen.DodajUczestnikow -> AddUczestnicy(onNavigate = { currentSreen = it})
-        Screen.WynikiCalkowite -> WynikiCalkowite(onNavigate = { currentSreen = it})
-        Screen.WynikiCzesciowe -> WynikiCzesciowe(onNavigate = { currentSreen = it})
+    when(currentScreen) {
+        Screen.Start -> { StartScreen(onNavigate =  { currentScreen = it})}
+        Screen.DodajJury -> AddJury(onNavigate = { currentScreen = it})
+        Screen.DodajKonkurencje -> AddKonkurencja(onNavigate = { currentScreen = it})
+        Screen.DodajUczestnikow -> AddUczestnicy(onNavigate = { currentScreen = it})
+        Screen.WynikiCalkowite -> WynikiCalkowite(onNavigate = { currentScreen = it})
+        Screen.WynikiCzesciowe -> WynikiCzesciowe(onNavigate = { currentScreen = it})
 
     }
 }

@@ -23,7 +23,13 @@ fun AddJury(onNavigate: (Screen)->Unit)
 
       Column(modifier = Modifier.fillMaxSize().weight(1f))
       {
-
+        AddJuryBody()
       }
   }
+}
+
+@Composable
+fun AddJuryBody()
+{
+
 }
