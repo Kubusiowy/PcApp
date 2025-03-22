@@ -15,108 +15,129 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.material.ButtonDefaults
+import androidx.compose.ui.text.font.FontWeight
 
 @Composable
 fun StartScreen(onNavigate: (Screen) -> Unit) {
-    Column(modifier = Modifier
-        .fillMaxSize()
-        .background(AppColors.Background),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
+    Column(Modifier.fillMaxSize())
+    {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .weight(1f)
+                .background(AppColors.Background),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
 
-
-    ) {
-
-
-        Button(onClick = { onNavigate(Screen.DodajKonkurencje) },
-            modifier = Modifier.fillMaxWidth(0.6f),
-            elevation = ButtonDefaults.elevation(
-                defaultElevation = 8.dp,
-                pressedElevation = 2.dp,
-                hoveredElevation = 6.dp,
-                focusedElevation = 4.dp
-            ),
-            colors = ButtonDefaults.buttonColors(
-                backgroundColor = AppColors.Accent,
-                contentColor = AppColors.TextPrimary
-            )
 
         ) {
-            Text("Dodaj Konkurencje",fontSize = 20.sp)
-        }
 
-        Spacer(Modifier.height(10.dp))
-        Button(onClick = {onNavigate(Screen.DodajJury)  },
-            modifier = Modifier.fillMaxWidth(0.6f),
-            elevation = ButtonDefaults.elevation(
-                defaultElevation = 8.dp,
-                pressedElevation = 2.dp,
-                hoveredElevation = 6.dp,
-                focusedElevation = 4.dp
-            ),
-            colors = ButtonDefaults.buttonColors(
-                backgroundColor = AppColors.Accent,
-                contentColor = AppColors.TextPrimary
-            )
+
+            Button(
+                onClick = { onNavigate(Screen.DodajKonkurencje) },
+                modifier = Modifier.fillMaxWidth(0.6f),
+                elevation = ButtonDefaults.elevation(
+                    defaultElevation = 8.dp,
+                    pressedElevation = 2.dp,
+                    hoveredElevation = 6.dp,
+                    focusedElevation = 4.dp
+                ),
+                colors = ButtonDefaults.buttonColors(
+                    backgroundColor = AppColors.Accent,
+                    contentColor = AppColors.TextPrimary
+                )
+
             ) {
-            Text("Dodaj Jury",fontSize = 20.sp)
-        }
+                Text("Dodaj Konkurencje", fontSize = 20.sp)
+            }
 
-        Spacer(Modifier.height(10.dp))
-        Button(onClick = {onNavigate(Screen.DodajUczestnikow)  },
-            modifier = Modifier
-                .fillMaxWidth(0.6f),
-            elevation = ButtonDefaults.elevation(
-                defaultElevation = 8.dp,
-                pressedElevation = 2.dp,
-                hoveredElevation = 6.dp,
-                focusedElevation = 4.dp
-            ),
-            colors = ButtonDefaults.buttonColors(
-                backgroundColor = AppColors.Accent,
-                contentColor = AppColors.TextPrimary
-            )
-        ){
-            Text("Dodaj uczestników",fontSize = 20.sp)
-        }
-
-        Spacer(Modifier.height(10.dp))
-        Button(onClick = { onNavigate(Screen.WynikiCalkowite) },
-            modifier = Modifier.fillMaxWidth(0.6f),
-            elevation = ButtonDefaults.elevation(
-                defaultElevation = 8.dp,
-                pressedElevation = 2.dp,
-                hoveredElevation = 6.dp,
-                focusedElevation = 4.dp
-            ),
-            colors = ButtonDefaults.buttonColors(
-                backgroundColor = AppColors.Accent,
-                contentColor = AppColors.TextPrimary
-            )
+            Spacer(Modifier.height(10.dp))
+            Button(
+                onClick = { onNavigate(Screen.DodajJury) },
+                modifier = Modifier.fillMaxWidth(0.6f),
+                elevation = ButtonDefaults.elevation(
+                    defaultElevation = 8.dp,
+                    pressedElevation = 2.dp,
+                    hoveredElevation = 6.dp,
+                    focusedElevation = 4.dp
+                ),
+                colors = ButtonDefaults.buttonColors(
+                    backgroundColor = AppColors.Accent,
+                    contentColor = AppColors.TextPrimary
+                )
             ) {
-            Text("Zobacz wyniki całkowite",fontSize = 20.sp)
-        }
+                Text("Dodaj Jury", fontSize = 20.sp)
+            }
 
-        Spacer(Modifier.height(10.dp))
-        Button(onClick = {onNavigate(Screen.WynikiCzesciowe)  },
-            modifier = Modifier.fillMaxWidth(0.6f),
-
-            elevation = ButtonDefaults.elevation(
-                defaultElevation = 8.dp,
-                pressedElevation = 2.dp,
-                hoveredElevation = 6.dp,
-                focusedElevation = 4.dp
-            ),
-            colors = ButtonDefaults.buttonColors(
-                backgroundColor = AppColors.Accent,
-                contentColor = AppColors.TextPrimary
-            )
+            Spacer(Modifier.height(10.dp))
+            Button(
+                onClick = { onNavigate(Screen.DodajUczestnikow) },
+                modifier = Modifier
+                    .fillMaxWidth(0.6f),
+                elevation = ButtonDefaults.elevation(
+                    defaultElevation = 8.dp,
+                    pressedElevation = 2.dp,
+                    hoveredElevation = 6.dp,
+                    focusedElevation = 4.dp
+                ),
+                colors = ButtonDefaults.buttonColors(
+                    backgroundColor = AppColors.Accent,
+                    contentColor = AppColors.TextPrimary
+                )
             ) {
-            Text("Zobacz wyniki częsciowe",fontSize = 20.sp)
+                Text("Dodaj uczestników", fontSize = 20.sp)
+            }
+
+            Spacer(Modifier.height(10.dp))
+            Button(
+                onClick = { onNavigate(Screen.WynikiCalkowite) },
+                modifier = Modifier.fillMaxWidth(0.6f),
+                elevation = ButtonDefaults.elevation(
+                    defaultElevation = 8.dp,
+                    pressedElevation = 2.dp,
+                    hoveredElevation = 6.dp,
+                    focusedElevation = 4.dp
+                ),
+                colors = ButtonDefaults.buttonColors(
+                    backgroundColor = AppColors.Accent,
+                    contentColor = AppColors.TextPrimary
+                )
+            ) {
+                Text("Zobacz wyniki całkowite", fontSize = 20.sp)
+            }
+
+            Spacer(Modifier.height(10.dp))
+            Button(
+                onClick = { onNavigate(Screen.WynikiCzesciowe) },
+                modifier = Modifier.fillMaxWidth(0.6f),
+
+                elevation = ButtonDefaults.elevation(
+                    defaultElevation = 8.dp,
+                    pressedElevation = 2.dp,
+                    hoveredElevation = 6.dp,
+                    focusedElevation = 4.dp
+                ),
+                colors = ButtonDefaults.buttonColors(
+                    backgroundColor = AppColors.Accent,
+                    contentColor = AppColors.TextPrimary
+                )
+            ) {
+                Text("Zobacz wyniki częsciowe", fontSize = 20.sp)
+            }
+
+
         }
-
-
-
+        Row(Modifier
+            .fillMaxWidth()
+            .background(AppColors.Surface)
+            .padding(5.dp),
+            horizontalArrangement = Arrangement.Center
+            )
+        {
+            Text(text = "Jakub Firkowski", color = AppColors.TextPrimary)
+            Spacer(Modifier.width(10.dp))
+            Text(text = "23.03.2025©", fontWeight = FontWeight.Bold,color = AppColors.TextSecondary)
+        }
 
     }
 }

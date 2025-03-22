@@ -1,5 +1,6 @@
 package AddKonkurencja
 
+import AddKonkurencja.body.Body
 import Data.Screen
 import Theme.AppColors
 
@@ -23,8 +24,9 @@ fun AddKonkurencja(onNavigate: (Screen)->Unit)
 
         Column(modifier = Modifier.fillMaxSize().weight(1f))
         {
-
+            Body()
         }
     }
 }
+
 
